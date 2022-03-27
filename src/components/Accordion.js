@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Accordion = ({ items }) => {
   const renderItems = items.map((item) => {
