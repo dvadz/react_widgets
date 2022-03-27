@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 
 const Accordion = ({ items }) => {
-  const renderItems = items.map((item) => {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const renderItems = items.map((item, index) => {
     return (
       <div key={item.title}>
         <div className='title active'>
