@@ -1,7 +1,16 @@
 import React, { useState } from "react";
 
 const Search = () => {
-  return <div>Search</div>;
+  return (
+    <div>
+      <div className='ui form'>
+        <div className='field'>
+          <label>Enter Search Term</label>
+          <input className='input'></input>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Search;
