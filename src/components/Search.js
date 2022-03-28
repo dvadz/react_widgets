@@ -9,7 +9,18 @@ const Search = () => {
   };
 
   useEffect(() => {
-    console.log(term);
+    const search = async () => {
+      const response = await axios.get("https://en.wikipedia.org/w/api.php", {
+        params: {
+          action: "query",
+          list: "search",
+          origin: "*",
+          format: "json",
+          srsearch: term,
+        },
+      });
+    };
+    search();
   }, [term]);
 
   return (
@@ -30,4 +41,3 @@ const Search = () => {
 };
 
 export default Search;
-// en.wikipedia.org/w/api.php?action=query&list=search&format=json&srsearch=canada
