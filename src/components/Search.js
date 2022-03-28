@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const Search = () => {
@@ -7,6 +7,10 @@ const Search = () => {
   const onInputChange = (term) => {
     setTerm(term);
   };
+
+  useEffect(() => {
+    console.log(term);
+  }, [term]);
 
   return (
     <div>
