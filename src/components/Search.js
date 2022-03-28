@@ -3,6 +3,7 @@ import axios from "axios";
 
 const Search = () => {
   const [term, setTerm] = useState("");
+  const [results, setResults] = useState([]);
 
   const onInputChange = (term) => {
     setTerm(term);
@@ -19,6 +20,7 @@ const Search = () => {
           srsearch: term,
         },
       });
+      setResults(response.data.query.search);
     };
     search();
   }, [term]);
