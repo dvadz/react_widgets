@@ -3,12 +3,21 @@ import React, { useState } from "react";
 const Search = () => {
   const [term, setTerm] = useState("");
 
+  const onInputChange = (term) => {
+    setTerm(term);
+  };
+
   return (
     <div>
       <div className='ui form'>
         <div className='field'>
           <label>Enter Search Term</label>
-          <input value={term} className='input'></input>
+          <input
+            value={term}
+            className='input'
+            onChange={(event) => {
+              onInputChange(event.target.value);
+            }}></input>
         </div>
       </div>
     </div>
