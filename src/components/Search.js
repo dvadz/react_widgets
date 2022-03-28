@@ -10,6 +10,7 @@ const Search = () => {
   };
 
   useEffect(() => {
+    if (!term) return;
     const search = async () => {
       const response = await axios.get("https://en.wikipedia.org/w/api.php", {
         params: {
