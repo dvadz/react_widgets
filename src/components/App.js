@@ -1,6 +1,7 @@
 import React from "react";
 import Accordion from "./Accordion";
 import Search from "./Search";
+import Dropdown from "./Dropdown";
 
 const items = [
   { title: "What is React?", content: "React is a front-end javascript framework" },
@@ -14,9 +15,7 @@ const items = [
 const App = () => {
   return (
     <div>
-      <Accordion items={items} />
-      <hr />
-      <Search />
+      <Dropdown />
     </div>
   );
 };
