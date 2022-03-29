@@ -7,8 +7,8 @@ const Dropdown = ({ options, selectedColor, onSelectChange }) => {
   useEffect(() => {
     document.body.addEventListener(
       "click",
-      () => {
-        console.log("BODY CLK");
+      (event) => {
+        if (ref.current.contains(event.target)) return;
         setOpen(false);
       },
       { capture: true }
