@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Accordion from "./Accordion";
 import Search from "./Search";
 import Dropdown from "./Dropdown";
+import { useState } from "react";
 
 const items = [
   { title: "What is React?", content: "React is a front-end javascript framework" },
@@ -20,9 +21,11 @@ const options = [
 ];
 
 const App = () => {
+  const [selectedColor, setSelectedColor] = useState(options[0]);
+
   return (
     <div>
-      <Dropdown options={options} />
+      <Dropdown options={options} selectedColor={selectedColor} onSelectChange={setSelectedColor} />
     </div>
   );
 };
