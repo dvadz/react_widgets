@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Dropdown = ({ options, selectedColor, onSelectChange }) => {
+  const [open, setOpen] = useState(false);
+
   const renderedOptions = options.map((option) => {
     if (selectedColor === option) return null;
 
