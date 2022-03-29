@@ -15,7 +15,7 @@ const Dropdown = ({ options, selectedColor, onSelectChange }) => {
         <label className='label'>Select a Color</label>
         <div className='ui selection dropdown visible active'>
           <i className='dropdown icon'></i>
-          <div className='text'>Select Color</div>
+          <div className='text'>{selectedColor.label}</div>
           <div className='menu visible transition'>{renderedOptions}</div>
         </div>
       </div>
