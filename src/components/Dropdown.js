@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const Dropdown = ({ options, selectedColor, onSelectChange }) => {
   const [open, setOpen] = useState(false);
+  const ref = useRef();
 
   useEffect(() => {
     document.body.addEventListener(
@@ -30,7 +31,7 @@ const Dropdown = ({ options, selectedColor, onSelectChange }) => {
   });
 
   return (
-    <div className='ui form'>
+    <div className='ui form' ref={ref}>
       <div className='field'>
         <label className='label'>Select a Color</label>
         <div
