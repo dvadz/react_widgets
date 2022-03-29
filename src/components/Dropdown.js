@@ -11,6 +11,10 @@ const Dropdown = ({ options, selectedColor, onSelectChange }) => {
     };
 
     document.body.addEventListener("click", onBodyClick, { capture: true });
+
+    return () => {
+      document.body.removeEventListener("click", onBodyClick, { capture: true });
+    };
   }, []);
 
   const renderedOptions = options.map((option) => {
