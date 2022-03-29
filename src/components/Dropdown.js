@@ -3,7 +3,12 @@ import React from "react";
 const Dropdown = ({ options, selectedColor, onSelectChange }) => {
   const renderedOptions = options.map((option) => {
     return (
-      <div key={option.value} className='item'>
+      <div
+        key={option.value}
+        className='item'
+        onClick={() => {
+          onSelectChange(option);
+        }}>
         {option.label}
       </div>
     );
