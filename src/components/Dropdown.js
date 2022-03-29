@@ -22,7 +22,11 @@ const Dropdown = ({ options, selectedColor, onSelectChange }) => {
     <div className='ui form'>
       <div className='field'>
         <label className='label'>Select a Color</label>
-        <div className='ui selection dropdown visible active'>
+        <div
+          className='ui selection dropdown visible active'
+          onClick={() => {
+            setOpen(!open);
+          }}>
           <i className='dropdown icon'></i>
           <div className='text'>{selectedColor.label}</div>
           <div className='menu visible transition'>{renderedOptions}</div>
