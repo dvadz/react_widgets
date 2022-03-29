@@ -21,23 +21,10 @@ const options = [
 
 const App = () => {
   const [selectedColor, setSelectedColor] = useState(options[0]);
-  const [show, setShow] = useState(true);
 
   return (
     <div>
-      <button
-        onClick={() => {
-          setShow(!show);
-        }}>
-        Toggle Dropdown
-      </button>
-      {show ? (
-        <Dropdown
-          options={options}
-          selectedColor={selectedColor}
-          onSelectChange={setSelectedColor}
-        />
-      ) : null}
+      <Dropdown options={options} selectedColor={selectedColor} onSelectChange={setSelectedColor} />
     </div>
   );
 };
