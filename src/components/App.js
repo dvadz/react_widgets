@@ -12,10 +12,17 @@ const items = [
   { title: "How do you use React?", content: "You use React by creating components" },
 ];
 
+const options = [
+  { label: "Burnt Red", value: "red" },
+  { label: "Cara-cara Orange", value: "orange" },
+  { label: "La Vie en Rose", value: "Pink" },
+  { label: "Forest Green", value: "green" },
+];
+
 const App = () => {
   return (
     <div>
-      <Dropdown />
+      <Dropdown options={options} />
     </div>
   );
 };
