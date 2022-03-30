@@ -9,7 +9,7 @@ const Convert = ({ text, language }) => {
     const key = "AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM";
 
     const doTranslation = async () => {
-      await axios.post(
+      const response = await axios.post(
         baseURL,
         {},
         {
@@ -20,6 +20,7 @@ const Convert = ({ text, language }) => {
           },
         }
       );
+      setTranslated(response.data.data.translations[0].translatedText);
     };
 
     doTranslation();
