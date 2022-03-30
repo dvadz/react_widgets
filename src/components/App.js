@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Accordion from "./Accordion";
 import Search from "./Search";
 import Dropdown from "./Dropdown";
+import Translate from "./Translate";
 
 const items = [
   { title: "What is React?", content: "React is a front-end javascript framework" },
@@ -25,6 +26,8 @@ const App = () => {
   return (
     <div>
       <Dropdown options={options} selectedColor={selectedColor} onSelectChange={setSelectedColor} />
+      <hr />
+      <Translate />
     </div>
   );
 };
