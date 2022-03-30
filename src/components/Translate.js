@@ -14,7 +14,6 @@ const Translate = () => {
   const [language, setLanguage] = useState(options[3]);
   const [text, setText] = useState("");
   const [translation, setTranslation] = useState("");
-  const key = "AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM";
 
   return (
     <div>
