@@ -4,6 +4,7 @@ import Search from "./Search";
 import Dropdown from "./Dropdown";
 import Translate from "./Translate";
 import Route from "./Route";
+import Header from "./Header";
 
 const items = [
   { title: "What is React?", content: "React is a front-end javascript framework" },
@@ -26,6 +27,8 @@ const App = () => {
 
   return (
     <div>
+      <Header />
+      <hr />
       <Route path='/'>
         <Accordion items={items} />
       </Route>
