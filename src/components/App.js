@@ -21,11 +21,11 @@ const options = [
 ];
 
 const App = () => {
-  const [selectedColor, setSelectedColor] = useState(options[0]);
+  const [selected, setSelectedColor] = useState(options[0]);
 
   return (
     <div>
-      <Dropdown options={options} selectedColor={selectedColor} onSelectChange={setSelectedColor} />
+      <Dropdown options={options} selected={selected} onSelectChange={setSelectedColor} />
       <hr />
       <Translate />
     </div>
