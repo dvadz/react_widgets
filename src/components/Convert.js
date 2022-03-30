@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const Convert = ({ text, language, setTranslation }) => {
+const Convert = ({ text, language }) => {
+  const [translated, setTranslated] = useState("");
+
   useEffect(() => {
     const baseURL = "https://translation.googleapis.com/language/translate/v2";
     const key = "AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM";

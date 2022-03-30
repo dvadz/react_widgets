@@ -13,7 +13,6 @@ const options = [
 const Translate = () => {
   const [language, setLanguage] = useState(options[3]);
   const [text, setText] = useState("");
-  const [translation, setTranslation] = useState("");
 
   return (
     <div>
@@ -36,7 +35,7 @@ const Translate = () => {
         onSelectChange={setLanguage}
       />
       <h3 className='ui header'>Output</h3>
-      <Convert text={text} language={language} setTranslation={setTranslation} />
+      <Convert text={text} language={language} />
     </div>
   );
 };
