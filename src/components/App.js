@@ -25,7 +25,12 @@ const App = () => {
 
   return (
     <div>
-      <Dropdown options={options} selected={selected} onSelectChange={setSelectedColor} />
+      <Dropdown
+        label='Select a color'
+        options={options}
+        selected={selected}
+        onSelectChange={setSelectedColor}
+      />
       <hr />
       <Translate />
     </div>
